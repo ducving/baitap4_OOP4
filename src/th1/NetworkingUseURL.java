@@ -1,0 +1,22 @@
+package th1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+
+public class NetworkingUseURL {
+    public static void main(String[] args) throws IOException {
+
+        URL url = new URL("https://www.youtube.com/watch?v=ffUxkjW5GMY&list=RD_U_l0etltxk&index=13");
+
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(url.openStream()));
+        String line;
+        while ((line = bufferedReader.readLine()) != null){
+            System.out.println(line);
+        }
+
+        bufferedReader.close();
+
+    }
+}
